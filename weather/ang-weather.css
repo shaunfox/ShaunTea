@@ -1,0 +1,180 @@
+html,
+body {
+	margin: 0 auto;
+    background-color: #F5F8FC;
+    height: 100%;
+    width: 100%;
+    /*overflow: hidden;*/
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto; 
+    height: 260px; 
+}
+.shadow {
+    -webkit-box-shadow: 0px 30px 100px 1px rgba(180, 180, 180, 1);
+    -moz-box-shadow: 0px 30px 100px 1px rgba(180, 180, 180, 1);
+    box-shadow: 0px 30px 100px 1px rgba(180, 180, 180, 1);
+}
+.top {
+    position: relative;
+    z-index: 0;
+    background-color: #61c3e6;
+    height: 260px;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+.top .btn {
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    top: 5px;
+    left: 740px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.top img {
+    position: relative;
+    z-index: -1;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: 205px; 
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.top .text {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: -70px;
+    font-size: 25px;
+}
+.top .text-city{
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.top input.city-text {
+    position: relative;
+    z-index: 1;
+    font-family: '微软雅黑';
+    font-size: 20px;
+    width: 210px;
+    height: 30px;  
+    text-align: center;
+}
+.top input.city-text:focus {
+    outline: 0;
+    border: 1px solid gray;
+}
+
+.top input.city-btn {display: inline-block; 
+zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */ 
+*display: inline; 
+vertical-align: baseline; 
+margin: 0 2px; 
+outline: none; 
+cursor: pointer; 
+text-align: center; 
+text-decoration: none; 
+font: 14px/100% Arial, Helvetica, sans-serif; 
+padding: .5em 2em .55em; 
+text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+-webkit-border-radius: .5em; 
+-moz-border-radius: .5em; 
+border-radius: .5em; 
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+} 
+.top input.city-btn:hover { 
+text-decoration: none; 
+} 
+.top input.city-btn:active { 
+position: relative; 
+top: 1px; 
+} 
+
+
+.bot {
+    float: left;
+
+    text-align: center;
+    display: inline-block;  
+
+    margin-top: 260px;
+    background-color: white; 
+    /*overflow: hidden;*/
+    display: inline-block;
+    width: 100%;
+}
+.bot tr.solid-table{
+    font-size: 26px;
+    font-weight: bold;
+}
+.bot tr {
+    /*overflow: hidden;*/
+    display: inline-block;
+    width: 100%;
+    /*height: 100%;*/
+    list-style-type: none;
+    padding-top: 30px;
+}
+.bot tr td {
+    color: #999999;
+    float: left;
+    width: 15%;
+   font-size: 20px;
+    text-align: center;
+}
+.bot tr td:nth-child(1) {
+    color: #4c4c4c;
+}
+.bot tr td h5 {
+    /*text-transform: uppercase;*/
+
+    font-weight: bold;
+} 
+
+
+.bot table tr td img{
+    -webkit-filter: invert(90%);
+    -moz-filter: invert(90%);
+    filter: invert(90%);
+    width: 3em;
+}
+/*.bot tr td img.first-img {
+    -webkit-filter: invert(30%);
+    -moz-filter: invert(30%);
+    filter: invert(30%);*/
+}
+
+table th.add-info{
+	font-size: 20px; 
+}
+
+.footer{
+    text-align:center;
+    margin:50px 0; 
+    font:normal 14px/24px 'MicroSoft YaHei'; 
+}

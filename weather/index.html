@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html> 
+<head>
+<meta charset="UTF-8">
+<title>天气预报 Angular | jQuery ~ Powered By Shaun</title> 
+<link rel="stylesheet" type="text/css" href="ang-weather.css">
+<script src="jquery.min.js"></script>
+<script src="template-native.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
+</head>
+<body>
+<div class="wrapper shadow">
+	<div class="top"> 
+		<img src="云_cloud103.svg" id="big" alt="">
+		<div class="text-city">		
+			<input class="city-text" type="text" id="city"  placeholder="北京">  
+			<input class="city-btn" type="button" value="查询天气">
+		</div>
+		<p class="text deg"></p>
+	</div>
+</div> 
+
+<script type="text/javascript" src="jqu-weather.js" ></script>
+
+<div class="bot">
+<div ng-app="Weather">
+	<div ng-controller="WeatherController"> 
+		<table>  
+		<th class="add-info" ng-repeat="weather in weatherData | limitTo:1">{{weather.date}}</th> 
+			<tr class="solid-table">
+				<td>未来几日</td>
+				<td>温度高低</td>  
+                <td>天气状况</td>  
+                <td>风力情况</td> 
+                <td>白日天气</td>  
+                <td>夜晚天气</td> 
+			</tr>
+			<tr ng-repeat="weather in weatherData">
+				<td>{{weather.date.slice(0,2)}}</td> 
+				<td>{{weather.temperature}}</td>  
+                <td>{{weather.weather}}</td>  
+                <td>{{weather.wind}}</td> 
+                <td><img ng-src="{{weather.dayPictureUrl}}" alt="白日天气"></td>  
+                <td><img ng-src="{{weather.nightPictureUrl}}" alt="夜晚天气"></td>  
+            </tr>  
+		</table>
+	</div>
+
+<script type="text/javascript" src="ang-weather.js" ></script>
+<script type="text/template" id="templateId">
+	<%for(var i=0;i<1;i++){%>
+			<th class="add-info"><%=list[0].date.slice(0,18)%></th> 
+	<%}%>
+<tr class="solid-table">
+				<td>未来几日</td>
+				<td>温度高低</td>  
+                <td>天气状况</td>  
+                <td>风力情况</td> 
+                <td>白日天气</td>  
+                <td>夜晚天气</td>
+			</tr>
+	<%for(var i=0;i<list.length;i++){%> 
+		<tr> 
+			<td><%=list[i].date.slice(0,2)%></td>
+			<td><%=list[i].temperature%></td>
+			<td><%=list[i].weather%></td>
+			<td><%=list[i].wind%></td>
+			<td><img src="<%=list[i].dayPictureUrl%>"></td>
+			<td><img src="<%=list[i].nightPictureUrl%>"></td>
+		</tr>
+	<%}%>
+</script> 
+</div> 
+<div class="footer">
+<h1>家人安康 万事如意</h1> 
+</div>
+</div>
+</body>
+</html>

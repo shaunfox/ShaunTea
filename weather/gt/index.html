@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html> 
+<head>
+<meta charset="UTF-8">
+<title>馆陶天气 | 阖家安康</title> 
+<link rel="stylesheet" type="text/css" href="../ang-weather.css">
+<script src="../jquery.min.js"></script>
+<script src="../template-native.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<!-- <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>  -->
+</head>
+<body>
+<div class="wrapper shadow">
+	<div class="top">
+		<img src="../云_cloud103.svg" id="big" alt="">
+		<div class="text-city">		
+			<input class="city-text" type="text" id="city"  placeholder="馆陶">  
+			<input class="city-btn" type="button" value="查询天气">
+		</div>
+		<p class="text deg"></p>
+	</div>
+</div> 
+
+<script type="text/javascript" src="../jqu-weather.js" ></script>
+
+<div class="bot">
+<div ng-app="Weather">
+	<div ng-controller="WeatherController"> 
+		<table>  
+		<th class="add-info" ng-repeat="weather in weatherData | limitTo:1">{{weather.date}}</th> 
+			<tr class="solid-table">
+				<td>未来几日</td>
+				<td>温度高低</td>  
+                <td>天气状况</td>  
+                <td>风力情况</td> 
+                <td>白日天气</td>  
+                <td>夜晚天气</td> 
+			</tr>
+			<tr ng-repeat="weather in weatherData">
+				<td>{{weather.date.slice(0,2)}}</td> 
+				<td>{{weather.temperature}}</td>  
+                <td>{{weather.weather}}</td>  
+                <td>{{weather.wind}}</td> 
+                <td><img class="last-img" ng-src="{{weather.dayPictureUrl}}" alt="白日天气"></td>  
+                <td><img class="first-img" ng-src="{{weather.nightPictureUrl}}" alt="夜晚天气"></td>  
+            </tr>  
+		</table>
+	</div>
+
+<script type="text/javascript"> 
+        var Weather = angular.module('Weather', []);  
+  
+        Weather.controller('WeatherController', ['$scope', '$http', function ($scope, $http) {  
+  
+            $http({   
+                url: 'http://api.map.baidu.com/telematics/v3/weather',  
+                method: 'jsonp',  
+                params: {  
+                    location: "馆陶",  
+                    output: 'json',  
+                    ak: '0A5bc3c4fb543c8f9bc54b77bc155724',  
+                    callback: 'JSON_CALLBACK'  
+                }  
+            }).success(function (info) {  
+  
+                console.log(info);   
+                $scope.weatherData = info.results[0].weather_data;   
+            }); 
+        }]);   
+</script>
+
+<script type="text/template" id="templateId">
+	<%for(var i=0;i<1;i++){%>
+			<th class="add-info"><%=list[0].date.slice(0,18)%></th> 
+	<%}%>
+<tr class="solid-table">
+				<td>未来几日</td>
+				<td>温度高低</td>  
+                <td>天气状况</td>  
+                <td>风力情况</td> 
+                <td>白日天气</td>  
+                <td>夜晚天气</td>
+			</tr>
+	<%for(var i=0;i<list.length;i++){%> 
+		<tr> 
+			<td><%=list[i].date.slice(0,2)%></td>
+			<td><%=list[i].temperature%></td>
+			<td><%=list[i].weather%></td>
+			<td><%=list[i].wind%></td>
+			<td class="first-img"><img src="<%=list[i].dayPictureUrl%>"></td>
+			<td><img src="<%=list[i].nightPictureUrl%>"></td>
+		</tr>
+	<%}%>
+</script> 
+</div> 
+<div class="footer">
+<h1>“出犯繁花露，归穿弱柳风。”《清明日》</h1> 
+</div>
+</div>
+</body>
+</html>
