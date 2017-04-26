@@ -1,100 +1,148 @@
-﻿<!DOCTYPE html> 
+﻿<!DOCTYPE html>
+
 <head>
-<meta charset="UTF-8">
-<title>馆陶天气 | 阖家安康</title> 
-<link rel="stylesheet" type="text/css" href="../ang-weather.css">
-<script src="../jquery.min.js"></script>
-<script src="../template-native.js"></script>
-<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
-<!-- <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>  -->
+    <meta charset="UTF-8">
+    <title>馆陶天气 | 阖家安康——【茶|健康|茶道|泡茶|斗茶|养生】</title>
+    <meta name="keywords" content="中华茶道,茶艺,养生,健康,喝茶,斗茶,功夫茶,泡茶,茶道" />
+    <meta name="description" content="展示茶的一瞥惊鸿与侘寂孤谨" />
+    <link rel="stylesheet" type="text/css" href="../ang-weather.css">
+        <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <script src="../jquery.min.js"></script>
+    <script src="../template-native.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <!-- <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>  -->
 </head>
+
 <body>
-<div class="wrapper shadow">
-	<div class="top">
-		<img src="../云_cloud103.svg" id="big" alt="">
-		<div class="text-city">		
-			<input class="city-text" type="text" id="city"  placeholder="馆陶">  
-			<input class="city-btn" type="button" value="查询天气">
-		</div>
-		<p class="text deg"></p>
-	</div>
-</div> 
+    <header class="cd-morph-dropdown">
+        <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
+        <div class="morph-dropdown-wrapper">
+            <div class="dropdown-list">
+                <ul>
+                    <li id="about" class="dropdown gallery">
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <a href="http://www.shaun.win/weather/" target="_blank">
+                                        <i class="fa fa-grav fa-fw"></i>
+                                        <p> 主页</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.shaun.win/sign.html" target="_blank">
+                                        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                                        <p> 注册</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.shaun.win/resume/" target="_blank">
+                                        <i class="fa fa-user-circle fa-fw"></i>
+                                        <p>简历</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- dropdown-list -->
+        </div>
+        <!-- morph-dropdown-wrapper -->
+    </header>
+    <div class="wrapper shadow">
+        <div class="top">
+            <img src="../云_cloud103.svg" id="big" alt="">
+            <div class="text-city">
+                <input class="city-text" type="text" id="city" placeholder="馆陶">
+                <input class="city-btn" type="button" value="查询天气">
+            </div>
+            <p class="text deg"></p>
+        </div>
+    </div> 
+    <div class="bot">
+        <div ng-app="Weather">
+            <div ng-controller="WeatherController">
+                <table>
+                    <th class="add-info" ng-repeat="weather in weatherData | limitTo:1">今日实时：{{weather.date}}</th>
+                    <tr class="solid-table">
+                        <td>今明几日</td>
+                        <td>温度高低</td>
+                        <td>天气状况</td>
+                        <td>风力情况</td>
+                        <td>白日天气</td>
+                        <td>夜晚天气</td>
+                    </tr>
+                    <tr ng-repeat="weather in weatherData">
+                        <td>{{weather.date.slice(0,2)}}</td>
+                        <td>{{weather.temperature}}</td>
+                        <td>{{weather.weather}}</td>
+                        <td>{{weather.wind}}</td>
+                        <td><img class="last-img" ng-src="{{weather.dayPictureUrl}}" alt="白日天气"></td>
+                        <td><img class="first-img" ng-src="{{weather.nightPictureUrl}}" alt="夜晚天气"></td>
+                    </tr>
+                </table>
+            </div>
+            <script type="text/javascript">
+            var Weather = angular.module('Weather', []);
 
-<script type="text/javascript" src="../jqu-weather.js" ></script>
+            Weather.controller('WeatherController', ['$scope', '$http', function($scope, $http) {
 
-<div class="bot">
-<div ng-app="Weather">
-	<div ng-controller="WeatherController"> 
-		<table>  
-		<th class="add-info" ng-repeat="weather in weatherData | limitTo:1">{{weather.date}}</th> 
-			<tr class="solid-table">
-				<td>未来几日</td>
-				<td>温度高低</td>  
-                <td>天气状况</td>  
-                <td>风力情况</td> 
-                <td>白日天气</td>  
-                <td>夜晚天气</td> 
-			</tr>
-			<tr ng-repeat="weather in weatherData">
-				<td>{{weather.date.slice(0,2)}}</td> 
-				<td>{{weather.temperature}}</td>  
-                <td>{{weather.weather}}</td>  
-                <td>{{weather.wind}}</td> 
-                <td><img class="last-img" ng-src="{{weather.dayPictureUrl}}" alt="白日天气"></td>  
-                <td><img class="first-img" ng-src="{{weather.nightPictureUrl}}" alt="夜晚天气"></td>  
-            </tr>  
-		</table>
-	</div>
+                $http({
+                    url: 'http://api.map.baidu.com/telematics/v3/weather',
+                    method: 'jsonp',
+                    params: {
+                        location: "馆陶",
+                        output: 'json',
+                        ak: '0A5bc3c4fb543c8f9bc54b77bc155724',
+                        callback: 'JSON_CALLBACK'
+                    }
+                }).success(function(info) {
 
-<script type="text/javascript"> 
-        var Weather = angular.module('Weather', []);  
-  
-        Weather.controller('WeatherController', ['$scope', '$http', function ($scope, $http) {  
-  
-            $http({   
-                url: 'http://api.map.baidu.com/telematics/v3/weather',  
-                method: 'jsonp',  
-                params: {  
-                    location: "馆陶",  
-                    output: 'json',  
-                    ak: '0A5bc3c4fb543c8f9bc54b77bc155724',  
-                    callback: 'JSON_CALLBACK'  
-                }  
-            }).success(function (info) {  
-  
-                console.log(info);   
-                $scope.weatherData = info.results[0].weather_data;   
-            }); 
-        }]);   
-</script>
-
-<script type="text/template" id="templateId">
-	<%for(var i=0;i<1;i++){%>
-			<th class="add-info"><%=list[0].date.slice(0,18)%></th> 
-	<%}%>
-<tr class="solid-table">
-				<td>未来几日</td>
-				<td>温度高低</td>  
-                <td>天气状况</td>  
-                <td>风力情况</td> 
-                <td>白日天气</td>  
-                <td>夜晚天气</td>
-			</tr>
-	<%for(var i=0;i<list.length;i++){%> 
-		<tr> 
-			<td><%=list[i].date.slice(0,2)%></td>
-			<td><%=list[i].temperature%></td>
-			<td><%=list[i].weather%></td>
-			<td><%=list[i].wind%></td>
-			<td class="first-img"><img src="<%=list[i].dayPictureUrl%>"></td>
-			<td><img src="<%=list[i].nightPictureUrl%>"></td>
-		</tr>
-	<%}%>
-</script> 
-</div> 
-<div class="footer">
-<h1>“出犯繁花露，归穿弱柳风。”《清明日》</h1> 
-</div>
-</div>
+                    console.log(info);
+                    $scope.weatherData = info.results[0].weather_data;
+                });
+            }]);
+            </script>
+            <script type="text/template" id="templateId">
+                <%for(var i=0;i<1;i++){%>
+                    <th class="add-info">今日实时：
+                        <%=list[0].date.slice(0,18)%>
+                    </th>
+                    <%}%>
+                        <tr class="solid-table">
+                            <td>今明几日</td>
+                            <td>温度高低</td>
+                            <td>天气状况</td>
+                            <td>风力情况</td>
+                            <td>白日天气</td>
+                            <td>夜晚天气</td>
+                        </tr>
+                        <%for(var i=0;i<list.length;i++){%>
+                            <tr>
+                                <td>
+                                    <%=list[i].date.slice(0,2)%>
+                                </td>
+                                <td>
+                                    <%=list[i].temperature%>
+                                </td>
+                                <td>
+                                    <%=list[i].weather%>
+                                </td>
+                                <td>
+                                    <%=list[i].wind%>
+                                </td>
+                                <td class="first-img"><img src="<%=list[i].dayPictureUrl%>"></td>
+                                <td><img src="<%=list[i].nightPictureUrl%>"></td>
+                            </tr>
+                            <%}%>
+            </script>
+        </div>
+        <div class="footer">
+            <h1>祝我的家人一切顺利，万事如意，平安健康！</h1>
+        </div>
+    </div>
+    <script src="../public-header.js"></script>
+    <script type="text/javascript" src="jqu-weather.js"></script>
 </body>
+
 </html>

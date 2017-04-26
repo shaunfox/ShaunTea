@@ -1,0 +1,1 @@
+<a style="font-size:18px; color:#a30;" href="http://www.shaun.win"> 注册成功，点击跳转到首页</a>

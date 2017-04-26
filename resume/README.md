@@ -1,2 +1,0 @@
-# onlineResume
-Shaun's Resume
