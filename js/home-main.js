@@ -1,4 +1,4 @@
-var app= angular.module('myApp', [])
+var app = angular.module('myApp', [])
 
 app.controller("signUpController", function($scope) {
     $scope.userdata = {};
@@ -12,9 +12,9 @@ app.controller("signUpController", function($scope) {
     }
 })
 
-app.controller('myCtrl', function($scope) {  
-    $scope.userdata.gender="male";
-});  
+app.controller('myCtrl', function($scope) {
+    $scope.userdata.gender = "male";
+});
 
 
 app.directive('compare', function() {
@@ -30,15 +30,14 @@ app.directive('compare', function() {
     o.link = function(sco, ele, att, con) {
         // v就是用户输入的值
         con.$validators.compare = function(v) {
-            return v == sco.orgText;
-        }
-        // 随时监测输入值
+                return v == sco.orgText;
+            }
+            // 随时监测输入值
         sco.$watch('orgText', function() {
             con.$validate();
-        }); 
+        });
 
     }
 
     return o;
 })
-

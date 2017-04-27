@@ -1,146 +1,148 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shaun.Tea | 大叶普洱 - Camellia assamica (Mast.) Chang —【茶|健康|茶道|泡茶|斗茶|养生】</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaun.Tea | 大叶普洱 - Camellia assamica (Mast.) Chang —【茶|健康|茶道|泡茶|斗茶|养生】</title>
     <meta name="keywords" content="中华茶道,茶艺,养生,健康,喝茶,斗茶,功夫茶,泡茶,茶道" />
     <meta name="description" content="展示茶的一瞥惊鸿与侘寂孤谨" />
-	<link rel="shortcut icon" type="image/x-icon" href="logo/1_Primary_logo_on_transparent_96x94.png"> 
-	<link rel="stylesheet" type="text/css" href="stylesheet/darkpuernav-normalize.css" />
-	<link rel="stylesheet" type="text/css" href="stylesheet/darkpuerhtmleaf-demo.css">
-	<link rel="stylesheet" href="stylesheet/darkpuer.csslider.default.css" />
-	<!--nav css-->
-<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        ::-webkit-scrollbar {
-            width: 2px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        ::-webkit-scrollbar-track {
-            background: none;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: rgba(74, 168, 0, 0.6);
-        }
-
-        ul, ol {
-            padding-left: 40px;
-        }
-
-        html, body {
-            height: 100%;
-            text-align: center;
-            font: 400 100% 'Raleway';
-            background-color: #716d65;
-            color: #CCC;
-        }
-
-        h1 {
-            font-weight: 700;
-            font-size: 310%;
-        }
-
-        h2 {
-            font-weight: 400;
-            font-size: 120%;
-            color: #71AD37;
-        }
-
-        #slider1 {
-            margin: 20px;
-        }
-
-            /*#slider1 > ul > li:nth-of-type(3) {
+    <link rel="shortcut icon" type="image/x-icon" href="logo/1_Primary_logo_on_transparent_96x94.png">
+    <link rel="stylesheet" type="text/css" href="stylesheet/darkpuernav-normalize.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet/darkpuerhtmleaf-demo.css">
+    <link rel="stylesheet" href="stylesheet/darkpuer.csslider.default.css" />
+    <!--nav css-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 2px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: none;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(74, 168, 0, 0.6);
+    }
+    
+    ul,
+    ol {
+        padding-left: 40px;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        text-align: center;
+        font: 400 100% 'Raleway';
+        background-color: #716d65;
+        color: #CCC;
+    }
+    
+    h1 {
+        font-weight: 700;
+        font-size: 310%;
+    }
+    
+    h2 {
+        font-weight: 400;
+        font-size: 120%;
+        color: #71AD37;
+    }
+    
+    #slider1 {
+        margin: 20px;
+    }
+    /*#slider1 > ul > li:nth-of-type(3) {
                 background: url(./themes/fruit.jpg);
             }*/
-
-            #slider1 > input:nth-of-type(3):checked ~ ul #bg {
-                width: 80%;
-                padding: 22px;
-                -moz-transition: .5s .5s;
-                -o-transition: .5s .5s;
-                -webkit-transition: .5s .5s;
-                transition: .5s .5s;
-            }
-
-                #slider1 > input:nth-of-type(3):checked ~ ul #bg div {
-                    -moz-transform: translate(0);
-                    -ms-transform: translate(0);
-                    -o-transform: translate(0);
-                    -webkit-transform: translate(0);
-                    transform: translate(0);
-                    -moz-transition: .5s .9s;
-                    -o-transition: .5s .9s;
-                    -webkit-transition: .5s .9s;
-                    transition: .5s .9s;
-                }
-
-        #bg {
-            color: white;
-            padding: 22px 0;
-            position: absolute;
-            left: 0;
-            top: 16%;
-            height: 30%;
-            width: 0;
-            z-index: 10;
-            overflow: hidden;
-        }
-
-            #bg:before {
-                content: '';
-                position: absolute;
-                left: -1px;
-                top: 1px;
-                height: 100%;
-                width: 100%;
-                z-index: -1;
-                background: url(images/darkpuer2.jpg) 1px 23%;
-                -webkit-filter: blur(7px);
-            }
-
-            #bg:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 100%;
-                z-index: 20;
-                background: rgba(0, 0, 0, 0.35);
-                pointer-events: none;
-            }
-
-            #bg div {
-                -moz-transform: translate(120%);
-                -ms-transform: translate(120%);
-                -o-transform: translate(120%);
-                -webkit-transform: translate(120%);
-                transform: translate(120%);
-            }
-
-        .scrollable p {
-            padding: 30px;
-            text-align: justify;
-            line-height: 140%;
-            font-size: 120%;
-        }
-    </style> 
+    
+    #slider1 > input:nth-of-type(3):checked ~ ul #bg {
+        width: 80%;
+        padding: 22px;
+        -moz-transition: .5s .5s;
+        -o-transition: .5s .5s;
+        -webkit-transition: .5s .5s;
+        transition: .5s .5s;
+    }
+    
+    #slider1 > input:nth-of-type(3):checked ~ ul #bg div {
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        -webkit-transform: translate(0);
+        transform: translate(0);
+        -moz-transition: .5s .9s;
+        -o-transition: .5s .9s;
+        -webkit-transition: .5s .9s;
+        transition: .5s .9s;
+    }
+    
+    #bg {
+        color: white;
+        padding: 22px 0;
+        position: absolute;
+        left: 0;
+        top: 16%;
+        height: 30%;
+        width: 0;
+        z-index: 10;
+        overflow: hidden;
+    }
+    
+    #bg:before {
+        content: '';
+        position: absolute;
+        left: -1px;
+        top: 1px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: url(images/darkpuer2.jpg) 1px 23%;
+        -webkit-filter: blur(7px);
+    }
+    
+    #bg:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 20;
+        background: rgba(0, 0, 0, 0.35);
+        pointer-events: none;
+    }
+    
+    #bg div {
+        -moz-transform: translate(120%);
+        -ms-transform: translate(120%);
+        -o-transform: translate(120%);
+        -webkit-transform: translate(120%);
+        transform: translate(120%);
+    }
+    
+    .scrollable p {
+        padding: 30px;
+        text-align: justify;
+        line-height: 140%;
+        font-size: 120%;
+    }
+    </style>
 </head>
-<body> 
-<!-- <div>
+
+<body>
+    <!-- <div>
 <ul style="position:absolute; float:left; text-align: center; z-index: 999; width: 100%; font-size:16px;"> 
 
 <li style="font-size: 10px; display: inline-block;">SHAUN TEA<sup>©</sup></li>
@@ -153,72 +155,74 @@
     
 </ul>
 </div>  -->
-<ol class="breadcrumb" style="background-color: none;">
-	<li><a href="http://www.shaun.win">Home</a></li>
-	<li><a href="http://www.shaun.win/dark/dark.html">Dark·黑茶</a></li>
-	<li class="active">大叶普洱</li>
-</ol> 
-	<div class="htmleaf-container">
-		
-		<div style="padding: 1em 0;">
-		    <h3>普洱茶是以中国云南省一定区域内云南大叶种晒青毛茶为原料，经过发酵加工成的散茶和紧压茶。</h3>
-		    <div id="slider1" class="csslider">
-		        <input type="radio" name="slides" id="slides_1" />
-		        <input type="radio" name="slides" id="slides_2" checked />
-		        <input type="radio" name="slides" id="slides_3" />
-		        <input type="radio" name="slides" id="slides_4" />
-		        <ul>
-		            <li>
-		                <h1>普洱茶的功效</h1>
-		                <p style="text-indent:2em;">千百年来，普洱茶深受广大消费者青睐，皆因茶质优良。同时普洱茶的独特风味，还与其有个自然转化的过程有关，转熟后的普洱茶，经过特殊的加工程序，压裂成大小不同、形状各异的茶团，置於乾燥处自然阴乾。再按运输要求，包装入篓，运住外地。普洱茶杀灭癌细胞的作用最为强烈，甚至常人喝茶的百分之一的浓度亦有明显的作用。</p>
-		            </li>
-		            <li>
-		                <img src="images/darkpuer1.jpg" />
-		            </li>
-		            <li>
-					<img src="images/darkpuer2.jpg" />
-		                <div id="bg">
-		                    <div>
-		                        <h1 >普洱当香！</h1>
-		                    </div>
-		                </div>
-		            </li>
-		            <li class="scrollable" style="text-indent:2em;">
-		                <h1>普洱熟茶和生茶减肥的功效对比</h1> 
-						<p>要比较生茶和熟茶哪个减肥效果更好，我们要先分析普洱茶减肥的机理。普洱茶的减肥，降脂功效主要来自两个方面的因素：一是由茶多酚、叶绿素、维生素C等多种有效成分综合作用形成的，二是发酵过程形成的多种有益菌群综合作用（菌群作用可以减少小肠对甘油三脂和糖的吸收、提高酵素分解腰腹部脂肪）。 </p>
-						<p>生茶初期（生厂1-2年内没有明显发酵转化的）减肥功效来自于因素一，随着存放过程中的自然发酵转化（这一转化过程在南方高湿环境中来得很快，自然存放一年的饼就会有比较明显的变化），其减肥作用逐步开始由两个因素共同形成。</p>
-						<p>人工发酵的普洱熟茶则是由以上两个因素共同起到减肥降脂的。所以总体上看，经过发酵后的普洱茶（无论是人工发酵熟茶还是自然发酵后的生茶）减肥降脂作用要好于新生厂出还没有开始转化的生茶。 </p>
-		            </li>
-		        </ul>
-		        <div class="arrows">
-		            <label for="slides_1"></label>
-		            <label for="slides_2"></label>
-		            <label for="slides_3"></label>
-		            <label for="slides_4"></label>
-		        </div>
-		        <div class="navigation">
-		            <div>
-		                <label for="slides_1"></label>
-		                <label for="slides_2"></label>
-		                <label for="slides_3"></label>
-		                <label for="slides_4"></label>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<div class="related">
-		    <h3>The other Dark Teas:</h3>
-		    <a href=>
-			  <img src="images/雅安藏茶.jpg" width="400" alt="雅安藏茶"/>
-			  <h3>雅安藏茶</h3>
-			</a>
-			<a href=>
-			  <img src="images/安化黑茶.jpg" width="400" alt="雅安藏茶"/>
-			  <h3>安化黑茶</h3>
-			</a>
-		</div>
-	</div>
-	<hr>
-<div><footer style="text-align:right;"> Powered by Shaun | http://www.shaun.win ——Shaun.Tea | 中国黑茶（Dark Tea） </footer></div>
+    <ol class="breadcrumb" style="background-color: none;">
+        <li><a href="http://www.shaun.win">Home</a></li>
+        <li><a href="http://www.shaun.win/dark/dark.html">Dark·黑茶</a></li>
+        <li class="active">大叶普洱</li>
+    </ol>
+    <div class="htmleaf-container">
+        <div style="padding: 1em 0;">
+            <h3>普洱茶是以中国云南省一定区域内云南大叶种晒青毛茶为原料，经过发酵加工成的散茶和紧压茶。</h3>
+            <div id="slider1" class="csslider">
+                <input type="radio" name="slides" id="slides_1" />
+                <input type="radio" name="slides" id="slides_2" checked />
+                <input type="radio" name="slides" id="slides_3" />
+                <input type="radio" name="slides" id="slides_4" />
+                <ul>
+                    <li>
+                        <h1>普洱茶的功效</h1>
+                        <p style="text-indent:2em;">千百年来，普洱茶深受广大消费者青睐，皆因茶质优良。同时普洱茶的独特风味，还与其有个自然转化的过程有关，转熟后的普洱茶，经过特殊的加工程序，压裂成大小不同、形状各异的茶团，置於乾燥处自然阴乾。再按运输要求，包装入篓，运住外地。普洱茶杀灭癌细胞的作用最为强烈，甚至常人喝茶的百分之一的浓度亦有明显的作用。</p>
+                    </li>
+                    <li>
+                        <img src="images/darkpuer1.jpg" />
+                    </li>
+                    <li>
+                        <img src="images/darkpuer2.jpg" />
+                        <div id="bg">
+                            <div>
+                                <h1>普洱当香！</h1>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="scrollable" style="text-indent:2em;">
+                        <h1>普洱熟茶和生茶减肥的功效对比</h1>
+                        <p>要比较生茶和熟茶哪个减肥效果更好，我们要先分析普洱茶减肥的机理。普洱茶的减肥，降脂功效主要来自两个方面的因素：一是由茶多酚、叶绿素、维生素C等多种有效成分综合作用形成的，二是发酵过程形成的多种有益菌群综合作用（菌群作用可以减少小肠对甘油三脂和糖的吸收、提高酵素分解腰腹部脂肪）。 </p>
+                        <p>生茶初期（生厂1-2年内没有明显发酵转化的）减肥功效来自于因素一，随着存放过程中的自然发酵转化（这一转化过程在南方高湿环境中来得很快，自然存放一年的饼就会有比较明显的变化），其减肥作用逐步开始由两个因素共同形成。</p>
+                        <p>人工发酵的普洱熟茶则是由以上两个因素共同起到减肥降脂的。所以总体上看，经过发酵后的普洱茶（无论是人工发酵熟茶还是自然发酵后的生茶）减肥降脂作用要好于新生厂出还没有开始转化的生茶。 </p>
+                    </li>
+                </ul>
+                <div class="arrows">
+                    <label for="slides_1"></label>
+                    <label for="slides_2"></label>
+                    <label for="slides_3"></label>
+                    <label for="slides_4"></label>
+                </div>
+                <div class="navigation">
+                    <div>
+                        <label for="slides_1"></label>
+                        <label for="slides_2"></label>
+                        <label for="slides_3"></label>
+                        <label for="slides_4"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related">
+            <h3>The other Dark Teas:</h3>
+            <a href=>
+                <img src="images/雅安藏茶.jpg" width="400" alt="雅安藏茶" />
+                <h3>雅安藏茶</h3>
+            </a>
+            <a href=>
+                <img src="images/安化黑茶.jpg" width="400" alt="雅安藏茶" />
+                <h3>安化黑茶</h3>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <footer style="text-align:right;"> Powered by Shaun | http://www.shaun.win ——Shaun.Tea | 中国黑茶（Dark Tea） </footer>
+    </div>
 </body>
+
 </html>

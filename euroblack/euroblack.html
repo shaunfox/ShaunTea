@@ -1,154 +1,172 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Shaun.Tea | 欧式红茶（Black Tea）—【茶|健康|茶道|泡茶|斗茶|养生】</title>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shaun.Tea | 欧式红茶（Black Tea）—【茶|健康|茶道|泡茶|斗茶|养生】</title>
     <meta name="keywords" content="中华茶道,茶艺,养生,健康,喝茶,斗茶,功夫茶,泡茶,茶道" />
     <meta name="description" content="展示茶的一瞥惊鸿与侘寂孤谨" />
+    <!-- <link href='http://fonts.useso.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+</head>
 
-		<!-- <link href='http://fonts.useso.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'> -->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-  		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-	<div>
-<ul style="position:absolute; float:left; margin-left: 2vw; z-index: 999; width: 100%; font-size:16px; padding-left: 0;"> 
-<!-- 
+<body>
+    <div>
+        <ul style="position:absolute; float:left; margin-left: 2vw; z-index: 999; width: 100%; font-size:16px; padding-left: 0;">
+            <!-- 
 <li style="padding-left:5%;display: inline-block;vertical-align: middle;">SHAUN TEA<sup>©</sup></li> -->
-	<li style="font-size: 3vw; display: inline-block;"><a href="http://www.shaun.win" style="color:#f2b632;">Shaun Tea</a></li>
-	<li style="margin-left:5%;display: inline-block;vertical-align: middle;;"><a title="Scented Tea" href="http://www.shaun.win/scented/scented.html">花茶</a></li>
-	<li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="Oolong Tea" href="http://www.shaun.win/oolong/oolong.html">乌龙</a></li>
-    <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="Green Tea" href="http://www.shaun.win/green/green.html">绿茶</a></li>
-    <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="White Tea" href="http://www.shaun.win/white/white.html">白茶</a></li>
-    <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="White Tea" href="http://www.shaun.win/yellow/yellow.html">黄茶</a></li>
-    <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="Dark Tea" href="http://www.shaun.win/dark/dark.html">黑茶</a></li>
-    
-</ul>
-</div> 
-		<div class="container">
-			<header id="header" class="codrops-header"><!-- 
-				<h1>试试左右拖拽鼠标或按键盘方向键</h1> --><!-- 
+            <li style="font-size: 3vw; display: inline-block;"><a href="http://www.shaun.win" style="color:#f2b632;">Shaun Tea</a></li>
+            <li style="margin-left:5%;display: inline-block;vertical-align: middle;;"><a title="Scented Tea" href="http://www.shaun.win/scented/scented.html">花茶</a></li>
+            <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="Oolong Tea" href="http://www.shaun.win/oolong/oolong.html">乌龙</a></li>
+            <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="Green Tea" href="http://www.shaun.win/green/green.html">绿茶</a></li>
+            <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="White Tea" href="http://www.shaun.win/white/white.html">白茶</a></li>
+            <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="White Tea" href="http://www.shaun.win/yellow/yellow.html">黄茶</a></li>
+            <li style="margin-left:5%;display: inline-block;vertical-align: middle;"><a title="Dark Tea" href="http://www.shaun.win/dark/dark.html">黑茶</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <header id="header" class="codrops-header">
+            <!-- 
+				<h1>试试左右拖拽鼠标或按键盘方向键</h1> -->
+            <!-- 
 				<span class="message">请在手机屏幕上左右划动</span> -->
-				<button class="slider-switch">Switch view</button>
-			</header>
-			<div id="overlay" class="overlay">
-				<div class="info">
-					<h2>说明</h2>
-					<span class="info-drag">可拖动缩略图</span>
-					<span class="info-keys">可以使用方向键</span>
-					<span class="info-switch">切换视图</span>
-					<button>Enjoy It!</button>	
-				</div>
-			</div>
-			<div id="slideshow" class="dragslider">
-				<section class="img-dragger img-dragger-large dragdealer">
-					<div class="handle"> 
-						<div class="slide" data-content="content-6">
-							<div class="img-wrap"><img src="img/6.jpg" alt="img6"/></div>
-							<h2>大吉岭红茶 <span>Darjeeling</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-						<div class="slide" data-content="content-7">
-							<div class="img-wrap"><img src="img/7.jpg" alt="img7"/></div>
-							<h2>锡兰红茶 <span>Ceylon</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-						<div class="slide" data-content="content-8">
-							<div class="img-wrap"><img src="img/8.jpg" alt="img8"/></div>
-							<h2>阿萨姆红茶 <span>Assam</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-					</div>
-				</section><!-- /img-dragger-->
-				<!-- Content section -->
-				<section class="pages">
-				<div class="content" data-content="content-6">
-						<h2>大吉岭红茶 <span>Darjeeling</span></h2>
-						<p>大吉岭红茶，世界三大高香红茶之一，产于印度西孟加拉省北部喜马拉雅山麓的大吉岭高原一带。当地年均温15℃左右，白天日照充足，但日夜温差大，谷地里常年弥漫云雾，是孕育此茶独特芳香的一大因素。
-						</p><p>
-						以5-6月的二号茶品质最优，被誉为“红茶中的香槟”。大吉岭红茶拥有高昂的身价。三、四月的一号茶多为青绿色，二号茶为金黄。其汤色橙黄，气味芬芳高雅，上品尤其带有葡萄香，口感细致柔和。
-						</p><p>
-						大吉岭红茶最适合清饮，但因为茶叶较大，需稍久焖（约5分钟）使茶叶尽舒，才能得其味。下午茶及进食口味生的盛餐后，最宜饮此茶。
-						</p><p>100多年来，大吉岭红茶被称颂为世界名茶之一，是英国贵族的宠儿。这种茶的前身就是中国福建武夷山的正山小种红茶。
-						</p><p>1857年英法联军入侵中国，一个英国搞植物学的军官发现了这种茶的价值，受英国政府的旨意，他利用一个叫福钧的苏格兰人帮助，收集茶叶苗、茶籽，并把技术工人带到印度，在大吉岭试种，几年后中国的红茶在这里安了家，从此以该地区的名字命名为大吉岭红茶。
-						</p> <p></p>
-					</div>
-					<div class="content" data-content="content-7">
-						<h2>锡兰红茶 <span>Ceylon</span></h2>
-						<p>锡兰红茶出产于斯里兰卡，是一种统称。又被称为“西冷红茶”“惜兰红茶”，该名称源于锡兰的英文Ceylon的发音，直接音译而来。
-						</p><p>锡兰，斯里兰卡共和国的旧称。锡兰高地红茶与安徽祁门红茶，大吉岭红茶并称世界的三大红茶。其主要品种有乌沃茶或乌巴茶、汀布拉茶和努沃勒埃利耶茶几种。
-						</p><p>斯里兰卡每年生产约25万吨茶叶，茶的种植基地仅限于岛国的中央高地和南部低地，茶叶按生长的海拔高度不同分为三类，即高地茶、中段茶和低地茶。
-						</p><p>斯里兰卡茶叶的特征是钠含量低。对于有高血压、需要摄取少量钠的人来说，是理想的饮品。
-						</p><p>锡兰红茶通过英国传入香港后，发展成具香港地道特色的饮料：丝袜奶茶及鸳鸯红茶。
-						</p> <p></p>
-					</div>
-					<div class="content" data-content="content-8">
-						<h2>阿萨姆红茶 <span>Assam</span></h2>
-						<p>阿萨姆茶是出产于印度东北部的阿萨姆邦的红茶。</p>
-						<p>阿萨姆位于东喜马拉雅山南麓，与不丹相邻。
-						</p><p>这种盛产在海平面附近的阿萨姆茶以浓稠，浓烈，麦芽香，清透鲜亮而出名。
-						</p><p>当地日照强烈，需另种树为茶树适度遮蔽；由于雨量丰富，因此促进热带性的阿萨姆大叶种茶树蓬勃发育。以6-7月采摘的品质最优，但10-11月产的秋茶较香。
-						</p><p>阿萨姆红茶，茶叶外形细扁，色呈深褐；汤色深红稍褐，带有淡淡的麦芽香、玫瑰香，滋味浓，属烈茶，是冬季饮茶的最佳选择。 
-						</p> <p></p>
-					</div>
-				</section>
-			</div>
-		</div><!-- /container --> 
-		<script src="js/dragdealer.js"></script>
-		<script src="js/classie.js"></script>
-		<script src="js/dragslideshow.js"></script>
-		<script>
-			(function() {
+            <button class="slider-switch">Switch view</button>
+        </header>
+        <div id="overlay" class="overlay">
+            <div class="info">
+                <h2>说明</h2>
+                <span class="info-drag">可拖动缩略图</span>
+                <span class="info-keys">可以使用方向键</span>
+                <span class="info-switch">切换视图</span>
+                <button>Enjoy It!</button>
+            </div>
+        </div>
+        <div id="slideshow" class="dragslider">
+            <section class="img-dragger img-dragger-large dragdealer">
+                <div class="handle">
+                    <div class="slide" data-content="content-6">
+                        <div class="img-wrap"><img src="img/6.jpg" alt="img6" /></div>
+                        <h2>大吉岭红茶 <span>Darjeeling</span></h2>
+                        <button class="content-switch">Read more</button>
+                    </div>
+                    <div class="slide" data-content="content-7">
+                        <div class="img-wrap"><img src="img/7.jpg" alt="img7" /></div>
+                        <h2>锡兰红茶 <span>Ceylon</span></h2>
+                        <button class="content-switch">Read more</button>
+                    </div>
+                    <div class="slide" data-content="content-8">
+                        <div class="img-wrap"><img src="img/8.jpg" alt="img8" /></div>
+                        <h2>阿萨姆红茶 <span>Assam</span></h2>
+                        <button class="content-switch">Read more</button>
+                    </div>
+                </div>
+            </section>
+            <!-- /img-dragger-->
+            <!-- Content section -->
+            <section class="pages">
+                <div class="content" data-content="content-6">
+                    <h2>大吉岭红茶 <span>Darjeeling</span></h2>
+                    <p>大吉岭红茶，世界三大高香红茶之一，产于印度西孟加拉省北部喜马拉雅山麓的大吉岭高原一带。当地年均温15℃左右，白天日照充足，但日夜温差大，谷地里常年弥漫云雾，是孕育此茶独特芳香的一大因素。
+                    </p>
+                    <p>
+                        以5-6月的二号茶品质最优，被誉为“红茶中的香槟”。大吉岭红茶拥有高昂的身价。三、四月的一号茶多为青绿色，二号茶为金黄。其汤色橙黄，气味芬芳高雅，上品尤其带有葡萄香，口感细致柔和。
+                    </p>
+                    <p>
+                        大吉岭红茶最适合清饮，但因为茶叶较大，需稍久焖（约5分钟）使茶叶尽舒，才能得其味。下午茶及进食口味生的盛餐后，最宜饮此茶。
+                    </p>
+                    <p>100多年来，大吉岭红茶被称颂为世界名茶之一，是英国贵族的宠儿。这种茶的前身就是中国福建武夷山的正山小种红茶。
+                    </p>
+                    <p>1857年英法联军入侵中国，一个英国搞植物学的军官发现了这种茶的价值，受英国政府的旨意，他利用一个叫福钧的苏格兰人帮助，收集茶叶苗、茶籽，并把技术工人带到印度，在大吉岭试种，几年后中国的红茶在这里安了家，从此以该地区的名字命名为大吉岭红茶。
+                    </p>
+                    <p></p>
+                </div>
+                <div class="content" data-content="content-7">
+                    <h2>锡兰红茶 <span>Ceylon</span></h2>
+                    <p>锡兰红茶出产于斯里兰卡，是一种统称。又被称为“西冷红茶”“惜兰红茶”，该名称源于锡兰的英文Ceylon的发音，直接音译而来。
+                    </p>
+                    <p>锡兰，斯里兰卡共和国的旧称。锡兰高地红茶与安徽祁门红茶，大吉岭红茶并称世界的三大红茶。其主要品种有乌沃茶或乌巴茶、汀布拉茶和努沃勒埃利耶茶几种。
+                    </p>
+                    <p>斯里兰卡每年生产约25万吨茶叶，茶的种植基地仅限于岛国的中央高地和南部低地，茶叶按生长的海拔高度不同分为三类，即高地茶、中段茶和低地茶。
+                    </p>
+                    <p>斯里兰卡茶叶的特征是钠含量低。对于有高血压、需要摄取少量钠的人来说，是理想的饮品。
+                    </p>
+                    <p>锡兰红茶通过英国传入香港后，发展成具香港地道特色的饮料：丝袜奶茶及鸳鸯红茶。
+                    </p>
+                    <p></p>
+                </div>
+                <div class="content" data-content="content-8">
+                    <h2>阿萨姆红茶 <span>Assam</span></h2>
+                    <p>阿萨姆茶是出产于印度东北部的阿萨姆邦的红茶。</p>
+                    <p>阿萨姆位于东喜马拉雅山南麓，与不丹相邻。
+                    </p>
+                    <p>这种盛产在海平面附近的阿萨姆茶以浓稠，浓烈，麦芽香，清透鲜亮而出名。
+                    </p>
+                    <p>当地日照强烈，需另种树为茶树适度遮蔽；由于雨量丰富，因此促进热带性的阿萨姆大叶种茶树蓬勃发育。以6-7月采摘的品质最优，但10-11月产的秋茶较香。
+                    </p>
+                    <p>阿萨姆红茶，茶叶外形细扁，色呈深褐；汤色深红稍褐，带有淡淡的麦芽香、玫瑰香，滋味浓，属烈茶，是冬季饮茶的最佳选择。
+                    </p>
+                    <p></p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- /container -->
+    <script src="js/dragdealer.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/dragslideshow.js"></script>
+    <script>
+    (function() {
 
-				var overlay = document.getElementById( 'overlay' ),
-					overlayClose = overlay.querySelector( 'button' ),
-					header = document.getElementById( 'header' )
-					switchBtnn = header.querySelector( 'button.slider-switch' ),
-					toggleBtnn = function() {
-						if( slideshow.isFullscreen ) {
-							classie.add( switchBtnn, 'view-maxi' );
-						}
-						else {
-							classie.remove( switchBtnn, 'view-maxi' );
-						}
-					},
-					toggleCtrls = function() {
-						if( !slideshow.isContent ) {
-							classie.add( header, 'hide' );
-						}
-					},
-					toggleCompleteCtrls = function() {
-						if( !slideshow.isContent ) {
-							classie.remove( header, 'hide' );
-						}
-					},
-					slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), { 
-						// toggle between fullscreen and minimized slideshow
-						onToggle : toggleBtnn,
-						// toggle the main image and the content view
-						onToggleContent : toggleCtrls,
-						// toggle the main image and the content view (triggered after the animation ends)
-						onToggleContentComplete : toggleCompleteCtrls
-					}),
-					toggleSlideshow = function() {
-						slideshow.toggle();
-						toggleBtnn();
-					},
-					closeOverlay = function() {
-						classie.add( overlay, 'hide' );
-					};
+        var overlay = document.getElementById('overlay'),
+            overlayClose = overlay.querySelector('button'),
+            header = document.getElementById('header')
+        switchBtnn = header.querySelector('button.slider-switch'),
+            toggleBtnn = function() {
+                if (slideshow.isFullscreen) {
+                    classie.add(switchBtnn, 'view-maxi');
+                } else {
+                    classie.remove(switchBtnn, 'view-maxi');
+                }
+            },
+            toggleCtrls = function() {
+                if (!slideshow.isContent) {
+                    classie.add(header, 'hide');
+                }
+            },
+            toggleCompleteCtrls = function() {
+                if (!slideshow.isContent) {
+                    classie.remove(header, 'hide');
+                }
+            },
+            slideshow = new DragSlideshow(document.getElementById('slideshow'), {
+                // toggle between fullscreen and minimized slideshow
+                onToggle: toggleBtnn,
+                // toggle the main image and the content view
+                onToggleContent: toggleCtrls,
+                // toggle the main image and the content view (triggered after the animation ends)
+                onToggleContentComplete: toggleCompleteCtrls
+            }),
+            toggleSlideshow = function() {
+                slideshow.toggle();
+                toggleBtnn();
+            },
+            closeOverlay = function() {
+                classie.add(overlay, 'hide');
+            };
 
-				// toggle between fullscreen and small slideshow
-				switchBtnn.addEventListener( 'click', toggleSlideshow );
-				// close overlay
-				overlayClose.addEventListener( 'click', closeOverlay );
+        // toggle between fullscreen and small slideshow
+        switchBtnn.addEventListener('click', toggleSlideshow);
+        // close overlay
+        overlayClose.addEventListener('click', closeOverlay);
 
-			}());
-		</script>
-	</body>
+    }());
+    </script>
+</body>
+
 </html>
