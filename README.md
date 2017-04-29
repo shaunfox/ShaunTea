@@ -8,8 +8,8 @@ My First Website
 - GitHub: https://github.com/shaunfox
 
 ## Glimpse of Website
-<div>
-  <h2><a href="http://www.shaun.win">网站一瞥</a></h2> 
+### 网站一瞥
+<div> 
   <img width="300" src="http://www.shaun.win/home.jpg"> 
 </div>
 
@@ -30,14 +30,12 @@ MIT
 ### 声明：
 ##### 建站过程中参考了大量互联网比较优秀的开源DEMO的源码、设计和创意，如果冒犯了Somebody，请邮件提醒本人，承诺将酌情尽快修改网页。
 
-### 感恩：
-
+### 感恩： 
 ##### 感谢网易云课堂和慕客网的免费课程，让人受益匪浅，通过实例的学习，能更快掌握这些前端技术并快速实践到自己的小项目中，感恩非常！
-另外非常感谢搭建网站期间运用的框架、工具的开发者们，这些工具真的means a lot!  
 
+### 致谢：
+##### 另外非常感谢搭建网站期间运用的框架、工具的开发者们。 They are really means a lot!
 
-<hr>
-## 以下是部分网站运用到的框架与工具：
 <hr>
 <div>
   <h3>Webpack</h3>
