@@ -3,15 +3,11 @@
 My First Website
 
 ## Author
+
+###### Shaun Wang
 - Email: shaun.wang@hotmail.com
 - WebSite: http://www.shaun.win
 - GitHub: https://github.com/shaunfox
-
-## Glimpse of Website
-### 网站一瞥
-<div> 
-  <img width="300" src="http://www.shaun.win/home.jpg"> 
-</div>
 
 
 ## LICENSE
