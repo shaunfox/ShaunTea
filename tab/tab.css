@@ -1,0 +1,47 @@
+.shaunTab{
+	width: 500px; 
+}
+
+.shaunTab .tab-nav{
+	height: 50px;
+}
+
+.shaunTab .tab-nav .tab-item{
+	float: left;
+	margin-right: 5px;
+	background-color: #767676;
+	border-radius: 3px 3px 0 0;
+	
+}
+
+.shaunTab .tab-nav .active{
+	background-color: #fff;
+}
+
+.shaunTab .tab-nav .tab-item a{
+	display: block;
+	height: 50px;
+	padding:0 20px;
+	color: #fff;
+	line-height: 50px;
+}
+
+.shaunTab .tab-nav .active a{
+	color: #000;
+}
+
+.shaunTab .content-wrap{
+	height: 300px;
+	width: 500px;
+	padding: 2px;  
+	background-color: #fff;
+}
+
+.shaunTab .content-wrap .content-item{
+	display: none;
+	position: absolute;
+}
+
+.shaunTab .content-wrap .current{
+	display: block;
+}

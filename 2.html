@@ -1,0 +1,136 @@
+<link href="http://statics.1024tools.com/libs/highlight.js/styles/googlecode.css" rel="stylesheet" />
+<pre class='hljs'><code>;
+(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">var</span> Tab = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(tab)</span> </span>{
+        <span class="hljs-keyword">var</span> _this_ = <span class="hljs-keyword">this</span>;
+        <span class="hljs-comment">// save tab module</span>
+        <span class="hljs-keyword">this</span>.tab = tab;
+        <span class="hljs-comment">// default config</span>
+        <span class="hljs-keyword">this</span>.config = {
+            <span class="hljs-string">"triggerType"</span>: <span class="hljs-string">"mouseover"</span>,
+            <span class="hljs-string">"effect"</span>: <span class="hljs-string">"default"</span>,
+            <span class="hljs-string">"auto"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"invoke"</span>: <span class="hljs-number">1</span>,
+        };
+        <span class="hljs-comment">// 如果配置参数存在，就扩展掉默认的配置参数</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.getConfig()) {
+            $.extend(<span class="hljs-keyword">this</span>.config, <span class="hljs-keyword">this</span>.getConfig());
+        };
+        <span class="hljs-comment">// 保存tab标签列表和内容列表</span>
+        <span class="hljs-keyword">this</span>.tabItems = <span class="hljs-keyword">this</span>.tab.find(<span class="hljs-string">"ul.tab-nav li.tab-item"</span>);
+        <span class="hljs-keyword">this</span>.contentItems = <span class="hljs-keyword">this</span>.tab.find(<span class="hljs-string">"div.content-wrap div.content-item"</span>); 
+        <span class="hljs-comment">// 保存配置参数（减少this.的链式查找资源消耗）</span>
+        <span class="hljs-keyword">var</span> config = <span class="hljs-keyword">this</span>.config;
+        <span class="hljs-keyword">this</span>.triggerTab();
+        <span class="hljs-comment">// 自动切换功能</span>
+        <span class="hljs-keyword">if</span> (config.auto) {
+            <span class="hljs-keyword">this</span>.timer = <span class="hljs-literal">null</span>;
+            <span class="hljs-comment">// 定义计数器，进行自动轮播</span>
+            <span class="hljs-keyword">this</span>.loop = <span class="hljs-number">0</span>;
+
+            <span class="hljs-keyword">this</span>.autoPlay();
+
+            <span class="hljs-keyword">this</span>.tab.hover(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">window</span>.clearInterval(_this_.timer);
+            }, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                _this_.autoPlay();
+            });
+        }; 
+        <span class="hljs-comment">// 设置默认显示第几个tab</span>
+        <span class="hljs-keyword">if</span> (config.invoke &gt; <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">this</span>.invoke(<span class="hljs-keyword">this</span>.tabItems.eq(config.invoke - <span class="hljs-number">1</span>));
+        }
+    }; 
+    Tab.prototype = {
+        <span class="hljs-comment">// 通过config绑定不同事件</span>
+        triggerTab: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-comment">// 保存配置参数（减少this.的链式查找资源消耗）</span>
+            <span class="hljs-keyword">var</span> config = <span class="hljs-keyword">this</span>.config;
+            <span class="hljs-keyword">var</span> _this_ = <span class="hljs-keyword">this</span>;
+
+            <span class="hljs-keyword">if</span> (config.triggerType === <span class="hljs-string">'click'</span>) {
+                <span class="hljs-keyword">this</span>.tabItems.on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                    _this_.invoke($(<span class="hljs-keyword">this</span>));
+                })
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (config.triggerType === <span class="hljs-string">'mouseover'</span> || config.triggerType != <span class="hljs-string">"click"</span>) {
+                <span class="hljs-keyword">this</span>.tabItems.on(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                    _this_.invoke($(<span class="hljs-keyword">this</span>));
+                })
+            };
+        }, 
+        <span class="hljs-comment">//自动播放</span>
+        autoPlay: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">var</span> _this_ = <span class="hljs-keyword">this</span>;
+            <span class="hljs-keyword">var</span> tabItems = <span class="hljs-keyword">this</span>.tabItems; <span class="hljs-comment">// 临时保存tab列表</span>
+            <span class="hljs-keyword">var</span> tabLength = tabItems.length; <span class="hljs-comment">// tab个数</span>
+            <span class="hljs-keyword">var</span> config = <span class="hljs-keyword">this</span>.config;
+
+            <span class="hljs-keyword">this</span>.timer = <span class="hljs-built_in">window</span>.setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                _this_.loop++;
+                <span class="hljs-keyword">if</span> (_this_.loop &gt;= tabLength) {
+                    _this_.loop = <span class="hljs-number">0</span>;
+                };
+                tabItems.eq(_this_.loop).trigger(config.triggerType)
+            }, config.auto);
+        },
+        <span class="hljs-comment">// 事件驱动程序</span>
+        invoke: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(currentTab)</span> </span>{
+            <span class="hljs-keyword">var</span> _this_ = <span class="hljs-keyword">this</span>;
+
+            <span class="hljs-comment">// 存储索引值，tab和content的对应</span>
+            <span class="hljs-keyword">var</span> index = currentTab.index();
+
+            <span class="hljs-comment">// 执行当前tab选中状态,添加和删除active类，切换对应的content内容，根据effect参数</span>
+            currentTab.addClass(<span class="hljs-string">'active'</span>).siblings().removeClass(<span class="hljs-string">'active'</span>);
+
+
+            <span class="hljs-comment">// 保存effct的value</span>
+            <span class="hljs-keyword">var</span> effect = <span class="hljs-keyword">this</span>.config.effect;
+            <span class="hljs-keyword">var</span> conItems = <span class="hljs-keyword">this</span>.contentItems;
+
+            <span class="hljs-comment">// console.log(effect);</span>
+
+            <span class="hljs-keyword">if</span> (effect === <span class="hljs-string">"default"</span> || effect != <span class="hljs-string">"fade"</span>) {
+                conItems.eq(index).addClass(<span class="hljs-string">'current'</span>).siblings().removeClass(<span class="hljs-string">'current'</span>);
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (effect === <span class="hljs-string">"fade"</span>) {
+                conItems.eq(index).fadeIn().siblings().fadeOut();
+            };
+
+            <span class="hljs-comment">// index and loop 同步</span>
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.auto) {
+                <span class="hljs-keyword">this</span>.loop = index;
+            }
+        },
+        <span class="hljs-comment">// get config</span>
+        getConfig: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-comment">// get data-config</span>
+            <span class="hljs-keyword">var</span> config = <span class="hljs-keyword">this</span>.tab.attr(<span class="hljs-string">'data-config'</span>);
+
+            <span class="hljs-comment">// make sure isConfig</span>
+            <span class="hljs-keyword">if</span> (config &amp;&amp; config != <span class="hljs-string">""</span>) {
+                <span class="hljs-comment">// 如果想输出config，但config是object,所以需要先将config转成string</span>
+                <span class="hljs-keyword">return</span> $.parseJSON(config);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+            }
+        }
+    };
+    <span class="hljs-comment">// 原生JS的组件方法</span>
+    Tab.init = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(tabs)</span> </span>{
+        <span class="hljs-comment">// var _this_ = this;</span>
+        tabs.each(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">new</span> Tab($(<span class="hljs-keyword">this</span>));
+        })
+    };
+    <span class="hljs-comment">// 注册为jquery的方法</span>
+    $.fn.extend({
+        tab: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">this</span>.each(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">new</span> Tab($(<span class="hljs-keyword">this</span>));
+            });
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>; <span class="hljs-comment">// 达到链式调用的效果</span>
+        }
+    });
+    <span class="hljs-built_in">window</span>.Tab = Tab;
+})(jQuery);
+</code></pre>

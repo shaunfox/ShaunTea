@@ -1,0 +1,523 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: Microsoft YaHei, "Droid Sans", "Droid Sans Fallback", "Heiti SC", Helvetica, sans-self;
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+ol,
+ul,
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+html {
+    font-size: 20px
+}
+
+body {
+    background-color: #e9e9e9;
+}
+
+
+/*正式内容*/
+
+.wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    display: none
+}
+
+.banner {
+    background: url(images/banner.jpg) no-repeat center top;
+    -moz-background-size: auto 100%;
+    -webkit-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    padding: 2rem 0 1.5rem;
+    height: 16rem
+}
+
+.banner .phone,
+.banner .qrcode {
+    display: none
+}
+
+.banner .layout {
+    width: 11rem;
+    margin: 0 auto;
+    padding-top: 3rem
+}
+
+.banner .logo {
+    width: 11rem
+}
+
+.banner .logo img {
+    width: 100%
+}
+
+.banner .download_link {
+    margin-top: 1rem
+}
+
+.banner .download_link a {
+    display: block;
+    font-size: .8rem;
+    height: 2rem;
+    line-height: 2rem;
+    border: 1px solid #FFF;
+    text-align: center;
+    color: #FFF;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    border-radius: .2rem;
+    text-decoration: none;
+}
+
+.banner .download_link a i {
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.2rem;
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    vertical-align: -0.3rem;
+    margin-right: .5rem
+}
+
+.banner .download_link a.ios {
+    margin-top: .5rem
+}
+
+.banner .download_link a.ios i {
+    background-image: url(images/icon_ios.png);
+}
+
+.banner .download_link a.android {
+    margin-top: .5rem
+}
+
+.banner .download_link a.android i {
+    background-image: url(images/icon_android.png);
+}
+
+.banner .download_link a.wp {
+    margin-top: .5rem
+}
+
+.banner .download_link a.wp i {
+    background-image: url(images/icon_wp.png);
+}
+
+.content {
+    background: #fff;
+}
+
+.content .block {
+    padding-bottom: 1rem
+}
+
+.content .odd_bg {
+    background: #f7f7f7
+}
+
+.content .img_wrap img {
+    width: 100%;
+    vertical-align: top
+}
+
+.content dl {
+    text-align: center
+}
+
+.content dl dt {
+    font-size: 1.7rem;
+    margin-bottom: .5rem
+}
+
+.wrap .content .layout dl dd {
+        font-size: 1.3rem;
+        line-height: 1.8em;
+        color: #999
+    }
+
+.footer {
+    height: 3rem;
+    text-align: center;
+    font-size: .6rem;
+    color: #ccc
+}
+
+.footer a {
+    color: #CCC
+}
+
+.footer span {
+    display: block
+}
+
+@media (min-width:999px) {
+    .shaunTab {
+        display: none;
+    }
+    .header {
+        display: block;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+    }
+    .header .layout {
+        width: 1000px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .header .logo {
+        float: left;
+        width: 195px;
+        height: 70px;
+        margin-top: 13px;
+        margin-right: 20px;
+    }
+    .header .nav {
+        float: left;
+        width: 500px;
+        height: 35px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 35px;
+    }
+    .header .nav li {
+        float: left;
+        padding: 0px 20px;
+        font-size: 18px;
+    }
+    .header .nav a {
+        text-decoration: none;
+        color: #333;
+    }
+    .header .nav a:hover {
+        color: #ff6600;
+    }
+    .header .search_down {
+        float: right;
+        height: 38px;
+        width: 240px;
+        margin-top: 27px;
+        font-size: 16px;
+        color: #999;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding-left: 8px;
+    }
+    .searchSend {
+        height: 36px;
+        font-size: 16px;
+        color: #999;
+        width: 192px;
+        border: none;
+        padding-right: 5px;
+        float: left;
+    }
+    .search_down_btn {
+        background: url(images/search.png) no-repeat center;
+        border: none;
+        width: 35px;
+        height: 35px;
+        float: left;
+    }
+    .searching-unit .go {
+        top: 8px
+    }
+    .searching-unit .go {
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: url(images/search.png);
+        position: absolute;
+        right: 0;
+        top: 1px;
+        cursor: pointer
+    }
+    .banner {
+        margin-top: 100px;
+        padding: 0;
+        height: 597px
+    }
+    .banner .layout {
+        width: 1050px;
+        padding: 0;
+        height: 597px;
+        position: relative
+    }
+    .banner .banner_main {
+        float: left;
+        display: inline;
+        margin-top: 80px;
+    }
+    .banner .banner_main .logo {
+        width: 380px;
+        margin-bottom: 40px;
+    }
+    .banner .banner_main .download_link {
+        position: relative;
+        width: 437px;
+        padding-left: 12px
+    }
+    .banner .banner_main .download_link a {
+        width: 195px;
+        height: 60px;
+        line-height: 60px;
+        text-align: left;
+        padding-left: 35px;
+        text-decoration: none;
+    }
+    .banner .banner_main .download_link a.android {
+        margin-top: 25px
+    }
+    .banner .banner_main .download_link a.wp {
+        margin-top: 25px
+    }
+    .banner .banner_main .download_link .qrcode {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 1;
+        background: #FFF;
+        width: 147px;
+        height: 147px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px
+    }
+    .banner .banner_main .download_link .qrcode span {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        height: 46px;
+        line-height: 46px
+    }
+    .banner .phone {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 420px;
+        height: 520px
+    }
+    .banner .phone img {
+        vertical-align: top
+    }
+    .content .layout {
+        width: 1000px;
+        height: 343px;
+        margin: 0 auto
+    }
+    .content .block {
+        padding: 0
+    }
+    .content .block .img_wrap {
+        float: right;
+        width: auto
+    }
+    .content .block .img_wrap img {
+        width: auto;
+        height: 343px
+    }
+    .content .block.odd_item .img_wrap {
+        float: left
+    }
+    .content .block dl {
+        float: left;
+        text-align: left;
+        padding-top: 85px;
+        width: 425px;
+    }
+    .content .block dl dt {
+        font-size: 25px
+    }
+    .content .block dl dd {
+        font-size: 18px;
+        line-height: 2em;
+        color: #999;
+    }
+    .content .block.odd_item dl {
+        float: right;
+        width: 425px
+    }
+    .footer {
+        height: 3rem;
+        line-height: 3rem
+    }
+    .footer span {
+        display: inline
+    }
+}
+
+@media (max-width:413px) {
+    html {
+        font-size: 18.4375px
+    }
+}
+
+@media (min-width:414px) and (max-width:432px) {
+    html {
+        font-size: 20.9px
+    }
+}
+
+@media (min-width:433px) {
+    html {
+        font-size: 21.875px
+    }
+    .wrap .content .layout dl dd {
+        font-size: 1.3rem;
+        line-height: 1.8em;
+        color: #999
+    }
+}
+
+@media (max-width:999px) and (min-width:300px) {
+    .wrap .content .layout dl dd {
+        font-size: 1.3rem;
+        line-height: 1.8em;
+        color: #999
+    }
+    #imageMenu {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background-color: #000;
+        box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
+    }
+    .header .logo img {
+        display: none;
+    }
+    .header .nav {
+        font-size: 20px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .header .nav ul {
+        height: 80px;
+        width: 90%;
+        margin-left: 7%;
+    }
+    .header .nav li {
+        text-align: center;
+        // float: left;
+        line-height: 80px;
+        display: inline-block;
+        margin: 0 2%;
+        width: 11%;
+    }
+    .header .nav li a {
+        color: #fff;
+    }
+    .header .search_down {
+        display: none;
+    }
+}

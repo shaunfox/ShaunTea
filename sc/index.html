@@ -138,7 +138,9 @@
                                         <div class="select-self select-self-open">
                                             <div class="quentity">
                                                 <a href="#" v-on:click.prevent="changeMoney(item,0)">-</a>
-                                                <input type="text" value="0" v-model="item.productQuentity">
+
+                                                <input type="text" value="0" v-on:change="calcTotalPrice" v-model="item.productQuentity">
+
                                                 <a href="#" v-on:click.prevent="changeMoney(item,1)">+</a>
                                             </div>
                                         </div>

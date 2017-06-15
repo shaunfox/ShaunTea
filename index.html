@@ -11,13 +11,122 @@
     <!-- logo -->
     <link rel="shortcut icon" type="image/x-icon" href="logo/1_Primary_logo_on_transparent_96x94.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" />
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/shuanTeaHome.css">
     <link rel="stylesheet" href="css/up-to-top.css">
+    <style>
+    body {
+        padding-top: 70px;
+    }
+    
+    .dropdown-menu li a {
+        text-align: center;
+        font-size: 20px; 
+    }
+    </style>
 </head>
 
 <body>
-    <div id="header">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color:#f2b632 !important;">ShaunTea</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="http://www.shaun.win"><i class="fa fa-home" style="color:#f2b632;"></i> <span class="sr-only">(current)</span> 茶·Tea </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leaf" style="color:green;"></i> · 未酵 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a title="Green Tea" href="http://www.shaun.win/green/green.html" target="_blank">绿&nbsp&nbsp&nbsp茶</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leaf" style="color:yellow;"></i> · 轻酵 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a title="White Tea" href="http://www.shaun.win/white/white.html" target="_blank">白&nbsp&nbsp&nbsp茶</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a title="Dark Tea" href="http://www.shaun.win/yellow/yellow.html" target="_blank">黄&nbsp&nbsp&nbsp茶</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a title="Scented Tea" href="http://www.shaun.win/scented/scented.html" target="_blank">花&nbsp&nbsp&nbsp茶</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a title="Oolong Tea" href="http://www.shaun.win/oolong/oolong.html" target="_blank">青&nbsp&nbsp&nbsp茶</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leaf" style="color:brown;"></i> · 重酵 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a title="Black Tea" href="http://www.shaun.win/black/black.html" target="_blank">红&nbsp&nbsp&nbsp茶</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a title="Dark Tea" href="http://www.shaun.win/dark/dark.html" target="_blank">黑&nbsp&nbsp&nbsp茶</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> ·Projs <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://github.com/shaunfox" target="_blank">
+                                    <i class="fa fa-github fa-fw"></i>
+                                    <span> GitHub </span>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="http://www.shaun.win/sc/" target="_blank">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>
+                                    <span> 采茶 </span>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="http://www.shaun.win/weather/" target="_blank">
+                                    <i class="fa fa-snowflake-o fa-fw"></i>
+                                    <span> 天气 </span>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="http://www.shaun.win/dict" target="_blank">
+                                    <i class="fa fa-book fa-fw"></i>
+                                    <span> 词典 </span>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="http://www.shaun.win/resume/" target="_blank">
+                                    <i class="fa fa-user-circle fa-fw"></i>
+                                    <span> 简历 </span>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="http://www.shaun.win/sign.html" target="_blank">
+                                    <i class="fa fa-spinner fa-spin fa-fw"></i>
+                                    <span> 注册 </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- scrap header nav -->
+    <!-- <div id="header">
         <ul class="header">
             <li class="header-logo"><a href="http://www.shaun.win">Shaun Tea</a></li>
             <li><a title="Scented Tea" href="http://www.shaun.win/scented/scented.html" target="_blank">花茶</a></li>
@@ -44,9 +153,9 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://www.shaun.win/resume/" target="_blank">
-                                        <i class="fa fa-user-circle fa-fw"></i>
-                                        <p>简历</p>
+                                    <a href="http://www.shaun.win/dict" target="_blank">
+                                        <i class="fa fa-book fa-fw"></i>
+                                        <p> 词典</p>
                                     </a>
                                 </li>
                                 <li>
@@ -61,15 +170,19 @@
                                         <p> 注册</p>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="http://www.shaun.win/resume/" target="_blank">
+                                        <i class="fa fa-user-circle fa-fw"></i>
+                                        <p>简历</p>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
                 </ul>
-            </div>
-            <!-- dropdown-list -->
-        </div>
-        <!-- morph-dropdown-wrapper -->
-    </header>
+            </div> 
+        </div> 
+    </header> -->
     <!-- <main class="cd-main-content">
     </main> -->
     <div class="htmleaf-container">
@@ -226,7 +339,9 @@
         </div>
     </div>
     <script src="lib/jquery.js"></script>
-    <script src="js/public-header.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="js/public-header.js"></script> -->
     <!-- Resource jQuery -->
 </body>
 

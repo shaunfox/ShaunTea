@@ -1,0 +1,85 @@
+ 
+    /* 手风琴图片轮播样式 */
+
+    #imageMenu {
+        width: 790px;
+        height: 280px; 
+        margin:10px auto; 
+        overflow: hidden;
+        // border: 1px solid #000;
+        // background-color: #00bb6c;
+    } 
+    #imageMenu h3{
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    /*动画样式*/
+    
+    #imageMenu ul * {
+        transition: all linear 0.05s;
+    }
+    
+    #imageMenu ul {
+        width: 100%;  
+        list-style: none; 
+
+    }
+    
+    #imageMenu li {
+        float: left;
+    }
+    
+    
+    #imageMenu li a {
+        width: 120px;
+        height: 200px;
+        display: block;
+        text-decoration: none;
+        // text-indent: 9999px;
+        border-right: 2px solid #fff;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+
+    #imageMenu ul li a span{
+    	display: block;
+    	width: 20px;
+    	font-size: 20px;
+    	color: #fff;
+    	margin:10px 0 0 10px;
+    	text-decoration: none;
+    	word-wrap:break-word;
+    	letter-spacing: 10px;
+
+    }
+
+    /*放大后的样式*/ 
+
+    #imageMenu ul li.active a {
+        height: 200px;
+        width: 300px;
+    }
+
+    #imageMenu li.pic-1 a {
+        background: url(pic-1.jpg) no-repeat;
+    }
+    
+    #imageMenu li.pic-2 a {
+        background: url(pic-2.jpg) no-repeat;
+    }
+    
+    #imageMenu li.pic-3 a {
+        background: url(pic-3.jpg) no-repeat;
+    }
+    
+    #imageMenu li.pic-4 a {
+        background: url(pic-4.jpg) no-repeat;
+    }
+    
+    #imageMenu li.pic-5 a {
+        background: url(pic-5.jpg) no-repeat;
+    }
